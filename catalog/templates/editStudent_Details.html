@@ -1,0 +1,44 @@
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+
+<div class="">
+		<div class="mr-sm-2 mb-2 col-sm-8" style="margin: 10px;">
+			<form action="{{ url_for('editStudent_Details',clid=clid,clename=studentdetails.stu_name)}}" method="POST">
+				<div class="panel panel-info">
+				  <div class="panel-heading" style="background-color:#08676c;color:white">Edit Student Details</div>
+				  <div class="panel-body"style="background-color:#04193a;color:white">
+				  	
+					  <div class="form-group">
+					  	<label class="text-primary" for="stu_name">Enter College Name:</label>
+					    <input type="text" class="form-control" name="stu_name" value="{{studentdetails.stu_name}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="stu_rnumber">Enter rollnumber:</label>
+					    <input type="text" class="form-control" name="stu_rnumber" value="{{studentdetails.stu_rnumber}}">
+					  </div>
+					  
+					  <div class="form-group">
+					  	<label class="text-primary" for="stu_phone_number">Enter phone number:</label>
+					    <input type="text" class="form-control" name="stu_phone_number" value="{{studentdetails.stu_phone_number}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="stu_course">Enter course </label>
+					    <input type="text" class="form-control" name="stu_course" value="{{studentdetails.stu_course}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="stu_address">Enter student Address:</label>
+					    <input type="text" class="form-control" name="stu_address" value="{{studentdetails.stu_address}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="slink">Enter link:</label>
+					    <input type="text" class="form-control" name="slink" value="{{studentdetails.slink}}">
+					  </div>					  
+				  </div> 
+				  <div class="panel-footer text-center"style="background-color:#08676c"><input type="submit" class="btn btn-primary" value="Edit"style="background-color:green">
+				    <button type="button" class="btn btn-info" value="cancle"style="background-color:yellow"><a href="http://localhost:8000/home">cancel</a></button> </div></div>
+				</div>
+				</form>
+			</div>
+</div>
+{% endblock content %}
